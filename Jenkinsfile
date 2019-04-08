@@ -14,6 +14,12 @@ pipeline {
         file(name: "FILE", description: "Choose a file to upload")
     }
     stages {
+        stage('One') {
+            steps {
+               echo " stage one ..."
+            }
+       }
+
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
